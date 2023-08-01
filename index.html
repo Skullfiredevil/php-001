@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            padding: 0;
+            font-size: 12pt;
+        }
+
+        body {
+            background-color: #e6e6e6;
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .header {
+            font-weight: bolder;
+            font-size: 2em;
+            margin: 0;
+            padding: 0.5em;
+        }
+
+        .top-bar {
+            background-color: darkorange;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 0.4em 0.4em #515151;
+            height: 4em;
+            margin-bottom: 1em;
+        }
+
+        .img {
+            object-fit: contain;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 1em;
+            padding: 0.5em;
+            box-shadow: 0 0.2em 0.6em #515151;
+        }
+
+        .form-group {
+            width: 60%;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .column * {
+            margin: 5px;
+        }
+
+        .aside {
+            width: 30%;
+        }
+    </style>
+    <title>Pizza API 🍕</title>
+    <link rel="icon"
+          href="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
+</head>
+<body>
+
+<div class="top-bar">
+    <img class="img" src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="">
+    <div class="header">About our Pizza's!</div>
+</div>
+<main>
+    <div class="form-group card column">
+        <div>
+            <label for="options">Options</label>
+            <select name="options" id="options">
+                <option value="bases">Bases</option>
+                <option value="sauces">Sauces</option>
+                <option value="flavours">Flavours</option>
+                <option value="extras">Extras</option>
+            </select>
+            <button id="submit">Check</button>
+        </div>
+        <div id="output">
+            Please select something to search
+        </div>
+    </div>
+    <aside class="aside card">
+        <h2>Useful Resources</h2>
+        <div class="column">
+            <p>Videos</p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=cuEtnrL9-H0">Fetch API</a>
+            <p>Documentation</p>
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch
+                API</a>
+            <a target="_blank"
+               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise
+                API</a>
+        </div>
+    </aside>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
